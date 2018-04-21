@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Super Power - Perakakis Evagelos E12146</title>
+  <link rel="icon" href="resources/myIcon.png">
+</head>
+
+<body>
+
+  <center>
+
+    <div id="pickDiv" class="pickCards">
+
+      <br/>
+      <h1 id="heroText" class="chooseText2"><strong>Choose Your Five SuperHeroes</strong></h1>
+
+      <br/>
+      <br/>
+
+      <img src="resources/superhero.png" id="card1" alt="card1" class="cardsToPick img-fluid" title="Choose">
+      <img src="resources/superhero.png" id="card2" alt="card2" class="cardsToPick img-fluid" title="Choose">
+      <img src="resources/superhero.png" id="card3" alt="card3" class="cardsToPick img-fluid" title="Choose">
+      <img src="resources/superhero.png" id="card4" alt="card4" class="cardsToPick img-fluid" title="Choose">
+      <img src="resources/superhero.png" id="card5" alt="card5" class="cardsToPick img-fluid" title="Choose">
+      <img src="resources/superhero.png" id="card6" alt="card6" class="cardsToPick img-fluid" title="Choose">
+      <img src="resources/superhero.png" id="card7" alt="card7" class="cardsToPick img-fluid" title="Choose">
+      <img src="resources/superhero.png" id="card8" alt="card8" class="cardsToPick img-fluid" title="Choose">
+      <img src="resources/superhero.png" id="card9" alt="card9" class="cardsToPick img-fluid" title="Choose">
+      <img src="resources/superhero.png" id="card10" alt="card10" class="cardsToPick img-fluid" title="Choose">
+
+      <br/>
+      <br/>
+
+      <h1 class="getReady chooseText" id="getReadyText" hidden><strong>Get Ready For Battle!!!</strong></h1>
+      <img src="resources/loading.png" id="loading" class="getReady" hidden>
+
+    </div>
+  </center>
+
+
+  <div class="playDiv" hidden>
+
+    <center>
+
+      <div id="parent">
+
+        <strong> <span id="scoreSpan"> <h1 class="scoreText">Score: <br/><span id="playerScore">0</span> - <span id="botScore">0</span> </h1> </span> </stong>
+
+  <div id="left">
+    <span><img src="" id="playerCard" alt="playerCard" class="img-fluid"> </span>
+  </div>
+
+  <div id="right">
+    <span><img src="" id="botCard" alt="botCard" class="img-fluid"></span>
+  </div>
+
+  </div>
+
+
+  </center>
+
+  <div>
+      <div id="swordDiv" style="position:absolute;"><img id="animateSword" src="resources/swordAnimation.png"/></div>
+      <div id="shieldDiv" style="position:absolute;"><img id="animateShield" src="resources/shieldAnimation.png"/></div>
+      <div id="shlashDivPlayer" style="position:absolute;"><img id="animateShlashPlayer" src="resources/slash.png"/></div>
+      <div id="shlashDivBot" style="position:absolute;"><img id="animateShlashBot" src="resources/slash.png"/></div>
+
+
+  </div>
+
+
+  <div>
+
+  <img src="resources/sword.png" id="attackButton" class="fightButton" title="Attack">
+
+  <img src="resources/shield.png" id="defendButton" class="fightButton" title="Defend">
+
+
+  <div id="playerAD">
+
+  <center>  <strong> <p class="chooseText">ATTACK:</p> <p class="chooseText" id="attackValue"></p> </center> </strong>
+        <center> <strong> <p class="chooseText">DEFENCE:</p> <p class="chooseText" id="defenceValue"></p> </center> </strong>
+
+      </div>
+
+
+      <div id="botAD">
+
+        <center> <strong> <p class="chooseText">ATTACK:</p> <p class="chooseText" id="attackValueBot"></p> </center> </strong>
+          <center> <strong> <p class="chooseText">DEFENCE:</p> <p class="chooseText" id="defenceValueBot"></p> </center> </strong>
+
+      </div>
+
+
+  </div>
+
+  <button id="gameRestart" type="button" class="btn btn-outline-warning" onClick="window.location.reload()">Restart</button>
+
+  </div>
+
+  <div class="container">
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header bg-danger">
+            <h2>Game Over</h2>
+          </div>
+
+          <div class="modal-body">
+            <h3 id="declareWinner"></h3>
+          </div>
+
+
+          <div class="modal-footer">
+            <button id="refreshButton" type="button" class="btn btn-success" onClick="window.location.reload()">Play Again</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

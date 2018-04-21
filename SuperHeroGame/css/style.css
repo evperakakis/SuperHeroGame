@@ -1,0 +1,246 @@
+body{
+  background-color: rgb(232,232,232);
+  background: url("bgStart.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Exo', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.chooseText {
+  color: rgb(255, 255, 0);
+}
+
+.chooseText2 {
+  color: rgb(255, 255, 0);
+  text-shadow: 0.2vw 0.4vw 0.1vw rgb(235, 25, 25);
+}
+
+#heroText {
+  font-size: 5vw;
+}
+
+.scoreText {
+  color: rgb(255, 255, 0);
+  font-size: 5.3vh;
+  width: 15%;
+}
+
+.cardsToPick {
+  width: 15vw;
+  height: 25vh;
+}
+
+.cardsToPick:hover {
+    background: radial-gradient(rgb(255, 255, 0),rgb(255, 255, 0),rgb(255, 255, 0),transparent,transparent);
+}
+
+#getReadyText {
+  width: 50vw;
+}
+
+#loading {
+  width: 8vw;
+  height: 16vh;
+}
+
+#parent {
+  width: 95%;
+}
+
+#parent div {
+  width: 49%;
+  display: inline-block;
+  top: 30%;
+  margin-top: 10vh;
+
+}
+
+#right {
+  text-align: right;
+}
+
+#left {
+  text-align: left;
+}
+
+
+#playerCard {
+  background: radial-gradient(rgb(0, 0, 255),rgb(0, 0, 255),rgba(0, 0, 255, 0.65),transparent,transparent,transparent);
+  width: 25vw;
+  height: 50vh;
+  left: 0vh;
+  bottom: 5vh;
+}
+
+#botCard {
+  background: radial-gradient(rgb(255, 0, 0),rgb(255, 0, 0),rgba(255, 0, 0, 0.65),transparent,transparent,transparent);
+  width: 25vw;
+  height: 50vh;
+  left: 0vh;
+  bottom: 5vh;
+}
+
+.fightButton {
+  position: fixed;
+  width: 10vw;
+  height: 15vh;
+}
+
+#attackButton {
+  left: 0vw;
+  bottom: 0vh;
+}
+
+#defendButton {
+  left: 13vw;
+  bottom: 0vh;
+}
+
+#playerAD {
+  left: 25vw;
+  bottom: 0.2vh;
+  position: fixed;
+  background-color: rgba(0, 0, 255, 0.50);
+  font-size: 2vh;
+}
+
+#botAD {
+  position: fixed;
+  background-color: rgba(255, 0, 0, 0.50);
+  right: 25vw;
+  bottom: 0.2vh;
+  font-size: 2vh;
+}
+
+
+.fightButton:hover {
+    background: radial-gradient(rgb(226, 211, 12),rgb(226, 211, 12),transparent,transparent);
+}
+
+#animateSword {
+  position: relative;
+  bottom: 40vh;
+  left: 0vw;
+  width: 12vw;
+  height: 25vh;
+ }
+
+#animateShield {
+  position: relative;
+  bottom: 40vh;
+  left: 5vw;
+  width: 20vw;
+  height: 25vh;
+}
+
+#animateShlashPlayer {
+  position: relative;
+  bottom: 40vh;
+  left: 3vw;
+  width: 25vw;
+  height: 25vh;
+}
+
+#animateShlashBot {
+  position: relative;
+  bottom: 40vh;
+  left: 70vw;
+  width: 25vw;
+  height: 25vh;
+}
+
+#scoreSpan {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#gameRestart {
+  position: absolute;
+  right: 0vw;
+  top: 0.2vh;
+}
+
+.modal {
+  outline: none;
+}
+
+.modal-header,.modal-body,.modal-footer {
+  margin: 0 auto;
+}
+
+
+/* MEDIA 600PX */
+@media screen and (max-width: 600px) {
+
+  .cardsToPick {
+    width: 20vw;
+    height: 20vh;
+  }
+
+  #getReadyText {
+    display:none;
+  }
+
+  #loading {
+    width: 8vw;
+    height: 11vh;
+  }
+
+  .fightButton {
+    position: fixed;
+    width: 12vw;
+    height: 12vh;
+  }
+
+  #playerCard {
+    background: radial-gradient(rgb(0, 0, 255),rgb(0, 0, 255),rgb(0, 0, 255),transparent,transparent,transparent);
+    width: 25vw;
+    height: 30vh;
+    left: 0vh;
+    margin-top: 2vh;
+  }
+
+  #botCard {
+    background: radial-gradient(rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0),transparent,transparent,transparent);
+    width: 25vw;
+    height: 30vh;
+    left: 0vh;
+    margin-top: 2vh;
+  }
+
+  #animateSword {
+    position: relative;
+    bottom: 30vh;
+    left: 0vw;
+    width: 12vw;
+    height: 25vh;
+   }
+
+  #animateShield {
+    position: relative;
+    bottom: 30vh;
+    left: 5vw;
+    width: 25vw;
+    height: 25vh;
+  }
+
+  #animateShlashPlayer {
+    position: relative;
+    bottom: 30vh;
+    left: 3vw;
+    width: 25vw;
+    height: 25vh;
+  }
+
+  #animateShlashBot {
+    position: relative;
+    bottom: 30vh;
+    left: 70vw;
+    width: 25vw;
+    height: 25vh;
+  }
+
+}
